@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/GBlogin/staticfiles/styles.css">
+    <title>Página de login</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div id="content">
+      <div id="lado-esquerdo">
+        <h2>
+          Faça o <br />
+          Login
+        </h2>
+      </div>
+      <div id="lado-direito">
+        <form action='/login/' method="post">
+          <h2>Logar</h2>
+          {% csrf_token %}
+          <input type="email" id="Email" name="username" placeholder="Insira seu email..." />
+          <br />
+
+          <input type="password" name="password" placeholder="Insira uma senha" maxlength="10"/> <br />
+
+          <button>Enviar</button>
+
+          <a href="Esqueceu sua senha"></a>
+        </form>
+      </div>
+    </div>
+    <footer>Colaboração de Gabriel com Gustavo &copy; feito em 2024</footer>
+  </body>
+</html>
